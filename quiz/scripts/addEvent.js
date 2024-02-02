@@ -5,14 +5,14 @@ window.onload = function() {
     x.addEventListener('mouseout', myThirdFunction('Moused out!'));
 }
 
-function myFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+function myFunction(msg) {return () =>
+{document.getElementById('demo').textContent = msg;}
 }
 
-function mySecondFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+function mySecondFunction(msg) { return () =>
+{document.getElementById('demo').textContent = msg;}
 }
 
-function myThirdFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+function myThirdFunction(msg) { return () =>
+{document.getElementById('demo').textContent = msg;}
 }
