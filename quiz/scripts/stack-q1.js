@@ -16,6 +16,15 @@ class PStackImpl extends PStack {
     super();
   }
 
+  get persons() {
+    return this._persons;
+  }
+
+  set persons(persons) {
+    this._persons = persons;
+  }
+
+
   push(p) {
     return this._persons.push(p)
   }
@@ -31,3 +40,4 @@ pstack.push({name: 'Dein', age: 19});
 console.log(pstack.pop());
 console.log(pstack.pop());
 console.log(pstack.persons);
+//
